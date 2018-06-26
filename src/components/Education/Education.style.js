@@ -6,3 +6,6 @@ export const EducationBlock = styled.div`
 `
 export const EducationName = styled.div``
 export const EducationYear = styled.div``
+export const HeaderText = styled.h1`
+	font-style: italic;
+`

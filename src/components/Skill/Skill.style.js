@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 
 export const SkillContainer = styled.div`
+	
+`
+export const SkillContent = styled.div`
 	flex-direction: row;
 	align-items: center;
 	display: flex;
@@ -29,4 +32,7 @@ export const SkillColumn = styled.div`
 export const UL = styled.ul``
 export const LI = styled.li`
 	margin-bottom: 10px;
+`
+export const HeaderText = styled.h1`
+	font-style: italic;
 `

@@ -34,10 +34,17 @@ export const Position = styled.div`
 	}
 `
 
-export const UL = styled.ul`
+export const AboutBlock = styled.div`
 	margin-top: 50px;
+`
+
+export const UL = styled.ul`
+	
 `
 
 export const LI = styled.li`
 	margin-bottom: 10px;
+`
+export const HeaderText = styled.h1`
+	font-style: ;
 `

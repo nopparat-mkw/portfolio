@@ -51,7 +51,7 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-size: 1.15em;
-	min-height: 100vh;
+	//min-height: 100vh;
 	margin: 1% 13% 3% 13%;
 	flex: 1;
 `
