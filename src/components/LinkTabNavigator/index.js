@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import { LinkNavigator, LinkText, TextSpan } from './LinkNavigator.style'
 import { inject, observer } from 'mobx-react'
 
-@inject('store')
+@inject('navigator', 'global')
 @observer
 class LinkTabNavigator extends Component {
-
 	render() {
+		const { navigator, global } = this.props
+
 		return (
 			<LinkNavigator>
 				{
-					this.props.navigators.length > 0 && this.props.navigators.map((nav) => {
+					navigator.getNavigators.map((nav) => {
 						return (
-							<LinkText key={`${nav.tabIndex}--${nav.title}`} active={this.props.store.currentActiveIndex === nav.tabIndex} onClick={() => this.props.store.changeTab(nav.tabIndex)}>
+							<LinkText key={`${nav.tabIndex}--${nav.title}`} active={global.currentActiveIndex === nav.tabIndex} onClick={() => global.changeTab(nav.tabIndex)}>
 								<TextSpan>{nav.title}</TextSpan>
 							</LinkText>
 						)
@@ -21,10 +22,6 @@ class LinkTabNavigator extends Component {
 			</LinkNavigator>
 		);
 	}
-}
-
-LinkTabNavigator.defaultProps = {
-	navigators: []
 }
 
 export default LinkTabNavigator;

@@ -7,13 +7,13 @@ import Skill from '../components/Skill';
 import WorkExperience from '../components/WorkExperience';
 import Education from '../components/Education';
 
-@inject('store')
+@inject('global')
 @observer
 class Portfolio extends Component {
 	renderContent = () => {
-		const { store } = this.props
+		const { global } = this.props
 
-		switch (store.activeIndex) {
+		switch (global.activeIndex) {
 			case 0:
 				return <Profile/>
 			case 1:
