@@ -7,9 +7,13 @@ import Skill from '../components/Skill';
 import WorkExperience from '../components/WorkExperience';
 import Education from '../components/Education';
 
-@inject('global')
+@inject('global', 'portfolio')
 @observer
 class Portfolio extends Component {
+	componentDidMount(){
+		this.props.portfolio.findPortfolio()
+	}
+
 	renderContent = () => {
 		const { global } = this.props
 
@@ -28,10 +32,20 @@ class Portfolio extends Component {
 	}
 
 	render() {
+		console.log(this.props.portfolio.isFetch)
+		
 		return (
 			<Container>
-				<Header/>
-				{ this.renderContent() }
+				{
+					this.props.portfolio.isFetch ?
+						<div>Loading...</div>
+						:
+						<div>
+							<Header/>
+							{ this.renderContent() }
+						</div>
+						
+				}
 			</Container>
 		);
 	}

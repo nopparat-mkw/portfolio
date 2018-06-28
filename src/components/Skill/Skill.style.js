@@ -22,10 +22,12 @@ export const SkillColumn = styled.div`
 	width: 45%;
 	padding: 10px;
 	margin: 10px;
+	height: 520px;
 	
 	@media only screen and (max-width: 480px) {
 		width: 100%;
 		margin: 0 0 10px 0;
+		height: auto;
 	}
 `
 

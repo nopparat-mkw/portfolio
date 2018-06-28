@@ -1,11 +1,11 @@
 import navigator from './NavigatorStore'
 import global from './GlobalStore'
-import education from './EducationStore'
+import portfolio from './PortfolioStore'
 
 const stores = window.stores = {
 	navigator,
 	global,
-	education
+	portfolio
 }
 
 export default stores

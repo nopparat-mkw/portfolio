@@ -3,21 +3,21 @@ import { EducationBlock, EducationContainer, EducationName, EducationYear, Heade
 import FadeIn from 'react-fade-in';
 import { inject, observer } from 'mobx-react';
 
-@inject('education')
+@inject('portfolio')
 @observer
 class Education extends Component {
 	render() {
-		const { education } = this.props
-
+		const { educations } = this.props.portfolio
+		
 		return (
 			<FadeIn>
 				<EducationContainer>
 					<HeaderText>Education</HeaderText>
 					{
-						education.educations.map((education) =>
-							<EducationBlock key={`${education.university}--${education.id}`}>
-								<EducationName>{`- ${education.major} | ${education.university}`}</EducationName>
-								<EducationYear><ul><li>{`${education.year}`}</li></ul></EducationYear>
+						Object.keys(educations).map((_key) =>
+							<EducationBlock key={`university--${educations[_key].university}`}>
+								<EducationName>{`- ${educations[_key].major} | ${educations[_key].university}`}</EducationName>
+								<EducationYear><ul><li>{`${educations[_key].year}`}</li></ul></EducationYear>
 							</EducationBlock>
 						)
 					}
