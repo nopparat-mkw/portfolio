@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"company": "@ Yuanta Securities (Thailand) Company Limited",
+		"positions": [
+			{
+				"id": 1,
+				"position": "System Analyst & Developer",
+				"exp": "August 2018 to presend"
+			}
+		]
+	},
+	{
+		"id": 2,
+		"company": "@ 9PI COMPANY | BANGKOK",
+		"positions": [
+			{
+				"id": 1,
+				"position": "Senior Software Developer / Team Lead",
+				"exp": "June 2017 to July 2018"
+			},
+			{
+				"id": 1,
+				"position": "Software Developer",
+				"exp": "June 2016 to June 2017"
+			},
+			{
+				"id": 1,
+				"position": "Junior Software Developer",
+				"exp": "June 2015 to June 2016"
+			}
+		]
+	}
+]
