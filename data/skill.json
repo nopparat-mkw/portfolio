@@ -1,0 +1,55 @@
+[
+	{
+		"id": 1,
+		"title": "Backend",
+		"skills": [
+			"C#",
+			"Java OOPS",
+			"SQL, MySQL",
+			"Maven 3.5",
+			"Java Spring",
+			"Java Spring JPA",
+			"Hibernate",
+			"RestFul Web Service",
+			"Socket.io",
+			"Node JS",
+			"Unit Test"
+		]
+	},
+	{
+		"id": 2,
+		"title": "Frontend",
+		"skills": [
+			"C# Razor",
+			"React JS",
+			"ES6",
+			"React Redux",
+			"React thunk",
+			"Unit Test",
+			"Material-ui",
+			"Ant Design",
+			"HTML",
+			"Javascript",
+			"styled-component"
+		]
+	},
+	{
+		"id": 3,
+		"title": "Server",
+		"skills": ["Digital Ocean", "Ubuntu 16.04", "Firebase Hosting", "Heroku Hosting", "Apache Tomcat", "Nginx"]
+	},
+	{
+		"id": 4,
+		"title": "Other",
+		"skills": [
+			"Google API",
+			"Github",
+			"Bitbucket",
+			"Gitlab",
+			"Firebase database",
+			"Firebase function",
+			"Omise",
+			"JWT"
+		]
+	}
+]
