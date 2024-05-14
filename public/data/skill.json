@@ -5,10 +5,10 @@
 		"skills": [
 			"C#",
 			"Java OOPS",
-			"SQL, MySQL",
+			"SQL, MySQL, Oracle, Postgresql",
 			"Maven 3.5",
 			"Java Spring",
-			"Java Spring Boot",
+			"Java Spring Boot 1.x, 2.x, 3.x",
 			"Hibernate",
 			"RestFul Web Service",
 			"Socket.io",
@@ -20,6 +20,7 @@
 		"id": 2,
 		"title": "Frontend",
 		"skills": [
+			"Angular",
 			"C# Razor",
 			"React JS",
 			"ES6",
@@ -35,13 +36,20 @@
 	},
 	{
 		"id": 3,
+		"title": "Cloud",
+		"skills": ["AWS", "AWS Lambda", "AWS EKS", "AWS SNS", "AWS SQS", "Google Cloud"]
+	},
+	{
+		"id": 4,
 		"title": "Server",
 		"skills": ["Digital Ocean", "Ubuntu 16.04", "Firebase Hosting", "Heroku Hosting", "Apache Tomcat", "Nginx"]
 	},
 	{
-		"id": 4,
+		"id": 5,
 		"title": "Other",
 		"skills": [
+			"Kafka",
+			"Kong",
 			"Google API",
 			"Github",
 			"Bitbucket",
