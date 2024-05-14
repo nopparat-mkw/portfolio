@@ -16,7 +16,7 @@ const Education = () => {
                     setData(cachedData);
                 } else {
                     // If data is not cached, fetch it from the server
-                    const response = await axios.get('/data/education.json');
+                    const response = await axios.get('data/education.json');
                     const profileData = response.data;
                     setData(profileData);
                     // Cache the fetched data for future use

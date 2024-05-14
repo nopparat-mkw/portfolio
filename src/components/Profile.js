@@ -14,7 +14,7 @@ const Profile = () => {
 	useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('/data/profile.json');
+                const response = await axios.get('data/profile.json');
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
