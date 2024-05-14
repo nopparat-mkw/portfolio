@@ -37,7 +37,9 @@ const Profile = () => {
     return (
         <FadeIn>
             <ProfileImage>
-                <img src={`${process.env.PUBLIC_URL}/img_profile.jpg`} alt="nopparat" loading="lazy"/>
+                <picture>
+					<img srcSet={`${process.env.PUBLIC_URL}/img_profile.jpg`} src={`${process.env.PUBLIC_URL}/img_profile.jpg`} loading="lazy" alt="nopparat" />
+				</picture>
                 <Name>{name}</Name>
                 <Position>{position}</Position>
 
