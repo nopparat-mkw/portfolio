@@ -3,12 +3,27 @@
   "name": "Nopparat Portfolio Website",
   "icons": [
     {
-      "src": "sandbox.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "sandbox16.png",
+      "sizes": "16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "sandbox.png",
+      "src": "sandbox24.png",
+      "sizes": "24x24",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "sandbox32.png",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "sandbox64.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "sandbox192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
@@ -19,7 +34,7 @@
     }
   ],
   "start_url": ".",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }
