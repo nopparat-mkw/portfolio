@@ -1,15 +1,23 @@
 {
 	"image_url": "https://res.cloudinary.com/m4dev/image/upload/v1529938265/img_profile.jpg",
 	"name": "Nopparat Mueangkaew",
-	"position": "System Analyst & Developer",
+	"position": "System Analyst",
 	"about": [
 		{
-			"id": 0,
-			"title": "I'm has over 3 year experience working as a Senior Software Developer / Team Lead within the Backend and Frontend team and Management Team from agile methodology at 9Pi Company"
+			"id": 3,
+			"title": "I am currently working at Yuanta Securities (Thailand) Company Limited as a System Analyst. My responsibilities include analyzing and designing systems, as well as managing timeline planning."
+		},
+		{
+			"id": 2,
+			"title": "I have over 3 years of experience in the role of System Analyst Manager at Krungsri Consumer. My responsibilities include analyzing and designing systems to meet the needs of the credit card business, as well as managing outsourced resources for development projects to ensure they are completed on time according to the Waterfall methodology. Additionally, I am responsible for troubleshooting issues that arise with the system."
 		},
 		{
 			"id": 1,
-			"title": "Currently working at Yuanta Securities (Thailand) Company Limited as a position System Analyst & Developer. development programming language c# and .net core 2.2 + react"
+			"title": "I have over 2 years of experience currently working at Yuanta Securities (Thailand) Company Limited as a System Analyst & Developer. My work involves development using programming languages such as C# and .NET Core 2.2, along with React, to support the securities business."
+		},
+		{
+			"id": 0,
+			"title": "I have over 3 years of experience working as a Senior Software Developer and Team Lead within both the Backend and Frontend teams, as well as the Management Team, using agile methodology at 9Pi Company."
 		}
 	]
 }

@@ -1,6 +1,33 @@
 [
 	{
-		"id": 1,
+		"id": 4,
+		"company": "@ Yuanta Securities (Thailand) Company Limited",
+		"positions": [
+			{
+				"id": 1,
+				"position": "System Analyst",
+				"exp": "February 2024 to presend"
+			}
+		]
+	},
+	{
+		"id": 3,
+		"company": "@ Krungsri Consumer Company Limited",
+		"positions": [
+			{
+				"id": 1,
+				"position": "System Analyst & Developer",
+				"exp": "November 2021 - January 2024"
+			},
+			{
+				"id": 2,
+				"position": "Java Programmer (Orion Information Technology Co., Ltd. - Contract)",
+				"exp": "September 2020 - October 2021"
+			}
+		]
+	},
+	{
+		"id": 2,
 		"company": "@ Yuanta Securities (Thailand) Company Limited",
 		"positions": [
 			{
@@ -11,7 +38,7 @@
 		]
 	},
 	{
-		"id": 2,
+		"id": 1,
 		"company": "@ 9PI COMPANY | BANGKOK",
 		"positions": [
 			{

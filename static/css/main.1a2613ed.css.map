@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.1a2613ed.css","mappings":"gEAEA,KACC,eAAgB,CAChB,UAAW,CACX,8BACD","sources":["index.css"],"sourcesContent":["@import url('https://fonts.googleapis.com/css?family=Poiret+One');\r\n\r\nbody {\r\n\tbackground: #222;\r\n\tcolor: #fff;\r\n\tfont-family: 'Poiret One', cursive;\r\n}\r\n"],"names":[],"sourceRoot":""}
