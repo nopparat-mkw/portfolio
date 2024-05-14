@@ -14,14 +14,15 @@ const Skill = () => {
                 const cachedData = await localForage.getItem('skill_data');
                 if (cachedData) {
                     setData(cachedData);
-                } else {
-                    // If data is not cached, fetch it from the server
-                    const response = await axios.get('data/skill.json');
-                    const profileData = response.data;
-                    setData(profileData);
-                    // Cache the fetched data for future use
-                    await localForage.setItem('skill_data', profileData);
                 }
+
+                // If data is not cached, fetch it from the server
+                const response = await axios.get('data/skill.json');
+                const profileData = response.data;
+                setData(profileData);
+                // Cache the fetched data for future use
+                await localForage.setItem('skill_data', profileData);
+                
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

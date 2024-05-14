@@ -13,8 +13,9 @@ const WorkExperience = () => {
             try {
                 const workData = await fetchWorkExperience();
                 const trainingData = await fetchTrainingExperience();
-                setWork(workData);
-                setTraining(trainingData);
+
+				setWork(workData);
+				setTraining(trainingData);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -27,30 +28,31 @@ const WorkExperience = () => {
         // Attempt to fetch work experience data from localForage
         const cachedWork = await localForage.getItem('work_experience');
         if (cachedWork) {
-            return cachedWork;
-        } else {
-            // If data is not cached, fetch it from the server
-            const workResponse = await axios.get('data/work_experience.json');
-            const workData = workResponse.data;
-            // Store fetched work experience data in localForage
-            await localForage.setItem('work_experience', workData);
-            return workData;
+            setWork(cachedWork);
         }
+		
+        const workResponse = await axios.get('data/work_experience.json');
+        const workData = workResponse.data;
+		
+        // Store fetched work experience data in localForage
+        await localForage.setItem('work_experience', workData);
+		return workData;
     };
 
     const fetchTrainingExperience = async () => {
         // Attempt to fetch training experience data from localForage
         const cachedTraining = await localForage.getItem('training_experience');
         if (cachedTraining) {
-            return cachedTraining;
-        } else {
-            // If data is not cached, fetch it from the server
-            const trainingResponse = await axios.get('data/training_experience.json');
-            const trainingData = trainingResponse.data;
-            // Store fetched training experience data in localForage
-            await localForage.setItem('training_experience', trainingData);
-            return trainingData;
-        }
+            setTraining(cachedTraining);
+        } 
+        // If data is not cached, fetch it from the server
+        const trainingResponse = await axios.get('data/training_experience.json');
+        const trainingData = trainingResponse.data;
+		
+        // Store fetched training experience data in localForage
+        await localForage.setItem('training_experience', trainingData);
+
+		return trainingData;
     };
 
     return (

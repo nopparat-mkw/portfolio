@@ -14,14 +14,15 @@ const Education = () => {
                 const cachedData = await localForage.getItem('education_data');
                 if (cachedData) {
                     setData(cachedData);
-                } else {
-                    // If data is not cached, fetch it from the server
-                    const response = await axios.get('data/education.json');
-                    const profileData = response.data;
-                    setData(profileData);
-                    // Cache the fetched data for future use
-                    await localForage.setItem('education_data', profileData);
                 }
+                
+				// If data is not cached, fetch it from the server
+                const response = await axios.get('data/education.json');
+                const profileData = response.data;
+                setData(profileData);
+                // Cache the fetched data for future use
+                await localForage.setItem('education_data', profileData);
+                
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

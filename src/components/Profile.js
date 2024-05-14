@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FadeIn from 'react-fade-in';
 import styled from 'styled-components';
 import axios from 'axios';
+import localforage from 'localforage';
 
 const Profile = () => {
     const [data, setData] = useState({
@@ -11,11 +12,18 @@ const Profile = () => {
         about: [],
     });
 
-	useEffect(() => {
+    useEffect(() => {
         const fetchData = async () => {
             try {
+				const cachedData = await localforage.getItem('profile_data');
+				if (cachedData) {
+					setData(cachedData);
+				}
+
                 const response = await axios.get('data/profile.json');
                 setData(response.data);
+                // Update cache
+                await localforage.setItem('profile_data', response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
