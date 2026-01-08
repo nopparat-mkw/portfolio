@@ -8,15 +8,23 @@ const navigators = [
   { title: "Education", tabIndex: 3 },
 ];
 
-const Header = ({ changeTab }) => {
+const Header = ({ activeTab, changeTab }) => {
   return (
     <HeaderContainer>
       <Nav aria-label="Main navigation">
         {navigators.map((nav) => (
           <NavButton
             key={`${nav.tabIndex}-${nav.title}`}
-            type="button"
+            role="button"
+            tabIndex={0}
+            $active={activeTab === nav.tabIndex}
+            aria-current={activeTab === nav.tabIndex ? "page" : undefined}
             onClick={() => changeTab(nav.tabIndex)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                changeTab(nav.tabIndex);
+              }
+            }}
           >
             <TextSpan>{nav.title}</TextSpan>
           </NavButton>
@@ -29,7 +37,7 @@ const Header = ({ changeTab }) => {
 };
 
 const HeaderContainer = styled.header`
-  margin-top: 50px;
+  margin-top: 10px;
 `;
 
 const Nav = styled.nav`
@@ -43,47 +51,56 @@ const Nav = styled.nav`
 `;
 
 const NavButton = styled.div`
-    margin-left: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
+  margin: 0 18px;
+  cursor: pointer;
 
-    &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 2px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: #fff;
-        opacity: 0;
-        transition: 0.2s transform, 0.2s opacity;
-        transform: scaleX(0.5);
-    }
-    &:hover::after {
-        opacity: 1;
-        transform: scaleX(1);
-    }
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 
-    @media only screen and (max-width: 480px) {
-        margin-bottom: 10px;
-    }
+  display: inline-block;
+  position: relative;
+  user-select: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: #fff;
+
+    opacity: ${({ $active }) => ($active ? 1 : 0)};
+    transform: ${({ $active }) => ($active ? "scaleX(1)" : "scaleX(0.5)")};
+    transition: 0.2s transform, 0.2s opacity;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 6px;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const TextSpan = styled.span`
-    display: block;
-    position: relative;
-    transition: 0.2s transform;
-    transform: translateY(0);
-    letter-spacing: 5px;
+  display: inline-block;
+  transition: transform 0.2s ease;
 
-    &:hover {
-        transform: translateY(-5px);
-    }
+  ${NavButton}:hover & {
+    transform: translateY(-5px);
+  }
 `;
 
 export default Header;

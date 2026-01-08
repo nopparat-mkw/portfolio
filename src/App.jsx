@@ -31,18 +31,21 @@ const App = () => {
 
   return (
     <Container>
-      <Header changeTab={changeTab} />
+      <Header activeTab={activeTab} changeTab={changeTab} />
+
       {renderContent()}
     </Container>
   );
 };
 
 const Container = styled.div`
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  font-size: 1.15em;
-  margin: 1% 13% 3% 13%;
-  flex: 1;
+  font-size: 1.05em;
 `;
+
 
 export default App;
