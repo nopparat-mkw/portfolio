@@ -1,0 +1,31 @@
+import styled from "styled-components";
+
+const SectionSeparator = ({ first = false }) => {
+  return (
+    <Wrapper aria-hidden="true">
+      <Line />
+      {first && <Ball />}
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  margin: 30px 0;
+`;
+
+const Line = styled.div`
+  margin: 0 auto;
+  width: 2px;
+  height: 35px;
+  background: #ccc;
+`;
+
+const Ball = styled.div`
+  margin: -1px auto 0;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50%;
+`;
+
+export default SectionSeparator;
