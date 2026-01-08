@@ -43,7 +43,7 @@ const Profile = () => {
           {/* ถ้าคุณเก็บรูปไว้ใน public/img_profile.jpg ให้ใช้ src="/img_profile.jpg"
               ถ้าจะใช้ Cloudinary ตาม image_url ก็ใช้ profileData.image_url ได้เลย */}
           <img
-            src="/img_profile.jpg"
+            src={`${import.meta.env.BASE_URL}img_profile.jpg`}
             loading="eager"
             decoding="async"
             width="192"
